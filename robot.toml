@@ -1,0 +1,16 @@
+paths = ["tests"]
+output-dir = "results"
+console = "dotted"
+
+[variables]
+BASE_URL = "https://petstore.swagger.io/v2"
+
+[profiles.ci]
+doc = "Profile used on CI: quieter console, one output folder per run."
+console = "quiet"
+output-dir = { expr = "f'results/ci'" }
+
+[profiles.debug]
+doc = "Verbose profile for local troubleshooting."
+console = "verbose"
+log-level = "DEBUG"

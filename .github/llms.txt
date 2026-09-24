@@ -1,0 +1,1100 @@
+### Create User Example
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExecutingTestCases/log_passed.html
+
+Demonstrates creating a new user with a username and password. This snippet is part of the QuickStart guide.
+
+```robotframework
+*** Settings ***
+Library    LoginLibrary
+
+*** Test Cases ***
+Create valid user
+    Create User    fred    P4ssw0rd
+```
+
+--------------------------------
+
+### Robot Framework Suite Initialization Example
+
+Source: https://github.com/robotframework/robotframework/blob/master/atest/testdata/parsing/data_formats/rest/with_init/__init__.rst
+
+Demonstrates settings for suite setup, documentation, and variables, including a Suite Setup keyword execution.
+
+```robotframework
+** Settings **
+  Suite Setup     Suite Setup
+  Documentation   Testing suite init file
+  Invalid Init    Setting
+
+** Variables **
+  ${msg} =  Running suite setup
+
+** Keywords **
+  Suite Setup      Log      ${msg}     # No more arguments!
+```
+
+--------------------------------
+
+### Install Docutils and Pygments
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/README.rst
+
+Install the necessary libraries for generating the Robot Framework User Guide using pip.
+
+```bash
+pip install docutils pygments
+```
+
+--------------------------------
+
+### Create User Guide Package
+
+Source: https://github.com/robotframework/robotframework/blob/master/BUILD.rst
+
+Create a zip package for the User Guide documentation.
+
+```python
+doc/userguide/ug2html.py zip
+```
+
+--------------------------------
+
+### Verify Robot Framework Installation (Linux)
+
+Source: https://github.com/robotframework/robotframework/blob/master/INSTALL.rst
+
+Run this command to confirm the correct Robot Framework version is installed and accessible in your PATH. This example is for a Linux environment.
+
+```bash
+$ robot --version
+Robot Framework 7.0 (Python 3.10.3 on linux)
+```
+
+--------------------------------
+
+### Test Installation
+
+Source: https://github.com/robotframework/robotframework/blob/master/BUILD.rst
+
+Install the pre-release version of Robot Framework to verify the installation process.
+
+```bash
+pip install --pre --upgrade robotframework
+```
+
+--------------------------------
+
+### Define Documentation Format
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/SupportingTools/Libdoc.rst
+
+Example of starting a library docstring using the Robot Framework format.
+
+```python
+"""Example library in Robot Framework format.
+```
+
+--------------------------------
+
+### Start Development Server
+
+Source: https://github.com/robotframework/robotframework/blob/master/src/web/README.md
+
+Execute this command to start the development server. The server will be available at localhost:1234.
+
+```bash
+npm run start
+```
+
+--------------------------------
+
+### Install Dependencies
+
+Source: https://github.com/robotframework/robotframework/blob/master/src/web/README.md
+
+Run this command to install project dependencies.
+
+```bash
+npm install
+```
+
+--------------------------------
+
+### Argument File Syntax Example
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExecutingTestCases/BasicUsage.rst
+
+Demonstrates the syntax for Robot Framework argument files, including options, comments, and data sources. Empty lines and lines starting with '#' are ignored.
+
+```robotframework
+--doc This is an example (where "special characters" are ok!)
+--metadata X:Value with spaces
+--variable NAME:Hello, world!
+# This is a comment
+path/to/my/tests
+```
+
+--------------------------------
+
+### Install Robot Framework from Source
+
+Source: https://github.com/robotframework/robotframework/blob/master/INSTALL.rst
+
+Use this command to install Robot Framework after cloning the repository. It allows for custom installation locations and package creation.
+
+```bash
+python setup.py install
+```
+
+--------------------------------
+
+### Generate Robot Framework User Guide
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/README.rst
+
+Run the ug2html.py script without arguments to get usage information for generating the Robot Framework User Guide.
+
+```bash
+python ug2html.py
+```
+
+--------------------------------
+
+### Robot Framework Suite Setup Keyword
+
+Source: https://github.com/robotframework/robotframework/blob/master/atest/testdata/parsing/data_formats/markdown/with_init/__init__.md
+
+Implements the 'Suite Setup' keyword to log a message. This keyword is executed once before the test suite starts.
+
+```robotframework
+*** Keywords ***
+Suite Setup
+    Log    ${msg}
+```
+
+--------------------------------
+
+### Test Setup and Teardown
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/SupportingTools/ExampleLibrary.html
+
+Demonstrates how to define setup and teardown actions for individual test cases.
+
+```robotframework
+*** Settings ***
+Library    BuiltIn
+
+*** Test Cases ***
+Test With Setup and Teardown
+    [Setup]    Log To Console    Test Setup
+    [Teardown]    Log To Console    Test Teardown
+    Log    This is the test body.
+```
+
+--------------------------------
+
+### Example Suite Configuration
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/CreatingTestData/CreatingTestSuites.rst
+
+A basic example of a suite configuration file showing settings, variables, and keyword definitions.
+
+```robotframework
+*** Settings ***
+Documentation    Example suite
+Suite Setup      Do Something    ${MESSAGE}
+Test Tags        example
+Library          SomeLibrary
+
+*** Variables ***
+${MESSAGE}       Hello, world!
+
+*** Keywords ***
+Do Something
+    [Arguments]    ${args}
+    Some Keyword    ${arg}
+    Another Keyword
+```
+
+--------------------------------
+
+### Install Robot Framework
+
+Source: https://github.com/robotframework/robotframework/blob/master/README.rst
+
+Install Robot Framework using pip. Ensure Python 3.8 or newer is installed.
+
+```bash
+pip install robotframework
+```
+
+--------------------------------
+
+### String to Bytes Conversion Examples
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExtendingRobotFramework/CreatingTestLibraries.rst
+
+Examples of string inputs and their corresponding byte conversions.
+
+```text
+good
+```
+
+```text
+hyvä (converted to hyv\xe4)
+```
+
+```text
+\x00 (converted to the null byte)
+```
+
+--------------------------------
+
+### Reference Example Library Path
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/SupportingTools/Libdoc.rst
+
+Points to the source file for a general library documentation example.
+
+```python
+src/SupportingTools/ExampleLibrary.py
+```
+
+--------------------------------
+
+### Integer and Sequence to Bytes Conversion Examples
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExtendingRobotFramework/CreatingTestLibraries.rst
+
+Examples of integer and sequence inputs converted to bytes.
+
+```text
+0 (converted to the null byte)
+```
+
+```text
+[82, 70, 33] (converted to RF!)
+```
+
+--------------------------------
+
+### Robot Framework Fence with Info String Example
+
+Source: https://github.com/robotframework/robotframework/blob/master/atest/testdata/parsing/data_formats/markdown/with_init/fence_blocks.md
+
+A Robot Framework test case showing a fence block with an info string, specifying a start line.
+
+```robotframework
+*** Test Cases ***
+Info String    Log    Robot block with info string.
+``` start=3
+
+```
+
+--------------------------------
+
+### Datetime Argument Conversion Examples
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExtendingRobotFramework/CreatingTestLibraries.rst
+
+Examples of string and numeric formats accepted for datetime arguments.
+
+```text
+2022-02-09T16:39:43.632269
+```
+
+```text
+20220209 16:39
+```
+
+```text
+2022-02-09
+```
+
+```text
+now (current local date and time)
+```
+
+```text
+TODAY (same as above)
+```
+
+```text
+${1644417583.632269} (Epoch time)
+```
+
+--------------------------------
+
+### Robot Framework Suite Setup
+
+Source: https://github.com/robotframework/robotframework/blob/master/atest/testdata/parsing/data_formats/markdown/with_init/__init__.md
+
+Defines suite setup, documentation, and invalid settings. Use this to structure your test suite initialization and documentation.
+
+```robotframework
+*** Settings ***
+Suite Setup     Suite Setup
+Documentation   Testing suite init file
+Invalid Init    Setting
+```
+
+--------------------------------
+
+### Install Execution Dependencies
+
+Source: https://github.com/robotframework/robotframework/blob/master/atest/README.rst
+
+Installs all necessary dependencies for running Robot Framework tests from the requirements-run.txt file using pip.
+
+```bash
+pip install -r atest/requirements-run.txt
+```
+
+--------------------------------
+
+### User keyword setup and teardown
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/CreatingTestData/CreatingUserKeywords.rst
+
+Defines setup and teardown logic for user keywords, including the use of variables.
+
+```robotframework
+*** Keywords ***
+Setup and teardown
+    [Setup]       Log    New in RF 7!
+    Do Something
+    [Teardown]    Log    Old feature.
+
+Using variables
+    [Setup]       ${SETUP}
+    Do Something
+    [Teardown]    ${TEARDOWN}
+```
+
+--------------------------------
+
+### Define Library Initialization and Keywords
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/SupportingTools/Libdoc.rst
+
+Demonstrates how to document a class constructor and keyword methods using docstrings.
+
+```python
+class TestLibrary:
+
+    def __init__(self, mode='default')
+        """Creates new TestLibrary. `mode` argument is used to determine mode."""
+        self.mode = mode
+
+    def some_keyword(self, arg):
+        """Does something based on given `arg`.
+
+        What is done depends on the `mode` specified when `importing` the library.
+        """
+        if self.mode == 'secret':
+             # ...
+```
+
+--------------------------------
+
+### Run Every Third Test Starting From Second
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExecutingTestCases/ConfiguringExecution.rst
+
+Example of using the --prerunmodifier option to specify a Python script by its name and run every third test, starting from the second test.
+
+```bash
+robot --prerunmodifier SelectEveryXthTest:3:1 tests.robot
+```
+
+--------------------------------
+
+### Customizing Test Execution with Listeners
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/SupportingTools/ExampleLibrary.html
+
+Provides an example of a simple listener that logs test start and end events.
+
+```python
+from robot.api import logger
+from robot.api.deco import keyword
+
+class MyListener:
+    ROBOT_LISTENER_API_VERSION = 2
+
+    def start_test(self, name, attrs):
+        logger.info(f"Starting test: {name}")
+
+    def end_test(self, name, attrs):
+        logger.info(f"Ending test: {name}")
+
+```
+
+--------------------------------
+
+### Robot Framework Execution Synopsis
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExecutingTestCases/BasicUsage.rst
+
+Illustrates the different ways to start Robot Framework test execution from the command line.
+
+```bash
+robot [options] data
+python -m robot [options] data
+python path/to/robot/ [options] data
+```
+
+--------------------------------
+
+### Robot Framework Example Library Keywords
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/SupportingTools/ExampleLibrary.html
+
+Documentation for keywords in the 'ExampleLibrary'. 'My Keyword' performs no action. 'Your Keyword' accepts an argument but also performs no action.
+
+```robotframework
+*** Settings ***
+Library    ExampleLibrary.py
+
+*** Keywords ***
+My Keyword
+    [Documentation]    Does nothing.
+
+Your Keyword
+    [Documentation]    Takes one argument and *does nothing* with it.
+
+    [Arguments]    ${arg}
+
+    # Example usage in a table:
+    # | Your Keyword | xxx |
+    # | Your Keyword | yyy |
+```
+
+--------------------------------
+
+### Preformatted Text Block Example
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/Appendices/DocumentationFormatting.rst
+
+Illustrates embedding preformatted text blocks in Robot Framework documentation. Lines starting with `| ` are treated as preformatted, preserving whitespace.
+
+```robotframework
+Doc before block:
+| inside block
+|     some    additional whitespace
+After block.
+```
+
+--------------------------------
+
+### Initialize Library Documentation UI
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/SupportingTools/LoggingLibrary.html
+
+Handles the initial rendering of the documentation page, including theme setup, template rendering, and event listener initialization.
+
+```javascript
+render(){document.title=this.libdoc.name,this.setTheme(),this.renderTemplates(),this.initTagSearch(),this.initHashEvents(),this.initLanguageMenu(),setTimeout(()=>{"open"===this.storage.get("keyword-wall")&&this.openKeywordWall()},0),function(){let e=document.createElement("div");e.id="modal-background",e.classList.add("modal-background"),e.addEventListener("click",({target:e})=>{e?.id==="modal-background"&&ru()});let t=document.createElement("button");t.innerHTML=`<svg xmlns=" http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="2em" height="2em" className="block" data-v-2754030d="" data-v-512b0344=""> <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" data-v-2754030d="" fill="var(--text-color)"></path></svg>`,t.classList.add("modal-close-button");let r=document.createElement("div");r.classList.add("modal-close-button-container"),r.appendChild(t),t.addEventListener("click",()=>{ru()}),e.appendChild(r),r.addEventListener("click",()=>{ru()});let n=document.createElement("div");n.id="modal",n.classList.add("modal"),n.addEventListener("click",({target:e})=>{"A"===e.tagName.toUpperCase()&&ru()});let o=document.createElement("div");o.id="modal-content",o.classList.add("modal-content"),n.appendChild(o),e.appendChild(n),document.body.appendChild(e),document.addEventListener("keydown",({key:e})=>{"Escape"===e&&ru()})}()}
+```
+
+--------------------------------
+
+### Using the AppiumLibrary in Robot Framework
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExecutingTestCases/report_passed.html
+
+AppiumLibrary enables Robot Framework to automate mobile applications on iOS and Android. It requires installation and Appium server setup.
+
+```robotframework
+*** Settings ***
+Library    AppiumLibrary
+
+*** Test Cases ***
+Mobile App Automation
+    # Appium server must be running
+    Open Application    http://localhost:4723/wd/hub    platformName=Android    platformVersion=10    deviceName=AndroidEmulator    appPackage=com.android.calculator2    appActivity=com.android.calculator2.Calculator
+    Click Button    digit_5
+    Click Button    op_add
+    Click Button    digit_7
+    Click Button    op_equals
+    Element Should Contain    result    12
+    Close Application
+
+```
+
+--------------------------------
+
+### Fenced Code Block Example
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/Appendices/DocumentationFormatting.rst
+
+Format code using fenced code blocks, starting and ending with three or more backticks or tildes. The opening fence can specify the language.
+
+```markdown
+```python
+def hello(name):
+    print(f"Hello, {name}!")
+
+hello("Robot")
+```
+```
+
+--------------------------------
+
+### AJAX Setup for Script Loading
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExecutingTestCases/report_passed.html
+
+Configures AJAX settings for script loading, including accepted content types and converters. It also sets cache to false and type to GET for cross-domain script requests.
+
+```javascript
+S.ajaxSetup({accepts:{script:"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript"},contents:{script:/\b(?:java|ecma)script\b/},converters:{"text script":function(e){return S.globalEval(e),e}}}),S.ajaxPrefilter("script",function(e){void 0===e.cache&&(e.cache=!1),e.crossDomain&&(e.type="GET")})
+```
+
+--------------------------------
+
+### Specifying Suite Initialization File
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExecutingTestCases/BasicUsage.rst
+
+Demonstrates how to specify a suite initialization file for an automatically created top-level suite, starting from Robot Framework 6.1.
+
+```bash
+robot __init__.robot my_tests.robot other_tests.robot
+```
+
+--------------------------------
+
+### Register Animation Prefilter
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExecutingTestCases/log_failed.html
+
+Register a prefilter function for animations using `ft.prefilter`. Prefilters can modify animation properties or perform setup before an animation starts. Use `ft.prefilters.unshift(e)` to add to the beginning or `ft.prefilters.push(e)` to add to the end.
+
+```javascript
+S.Animation=S.extend(ft,{tweeners:{"*":[function(e,t){var n=this.createTween(e,t);return se(n.elem,e,te.exec(t),n),n}]},tweener:function(e,t){m(e)?(t=e,e=["*" ]):e=e.match(P);for(var n,r=0,i=e.length;r<i;r++)n=e[r],ft.tweeners[n]=ft.tweeners[n]||[],ft.tweeners[n].unshift(t)},prefilters:[function(e,t,n){var r,i,o,a,s,u,l,c,f="width"in t||"height"in t,p=this,d={},h=e.style,g=e.nodeType&&ae(e),v=Y.get(e,"fxshow");for(r in n.queue||(null==(a=S._queueHooks(e,"fx")).unqueued&&(a.unqueued=0,s=a.empty.fire,a.empty.fire=function(){a.unqueued||s()}),a.unqueued++,p.always(function(){p.always(function(){a.unqueued--,S.queue(e,"fx").length||a.empty.fire()})}))if(i=t[r],ot.test(i)){if(delete t[r],o=o||"toggle"===i,i===(g?"hide":"show")){if("show"!==i||!v||void 0===v[r])continue;g=!0}d[r]=v&&v[r]||S.style(e,r)}if((u=!S.isEmptyObject(t))||!S.isEmptyObject(d))for(r in f&&1===e.nodeType&&(
+        n.overflow=[h.overflow,h.overflowX,h.overflowY],
+        null==(l=v&&v.display)&&(l=Y.get(e,"display")),
+        "none"=== (c=S.css(e,"display"))&& (l?c=l:(le([e],!0),l=e.style.display||l,c=S.css(e,"display"))),
+        ("inline"===c||"inline-block"===c&&null!=l)&&"none"===S.css(e,"float")&&
+        (u||(p.done(function(){h.display=l}),null==l&&(
+          c=h.display,
+          l="none"===c?"":""
+        ))),
+        h.display="inline-block"
+      )),n.overflow&&(h.overflow="hidden",p.always(function(){h.overflow=n.overflow[0],h.overflowX=n.overflow[1],h.overflowY=n.overflow[2]})),
+      u=!1,
+      d)u||(v?"hidden"in v&&(g=v.hidden):v=Y.access(e,"fxshow",{display:l}),o&&(v.hidden=!g),g&&le([e],!0)),p.done(function(){
+        for(r in g||le([e]),Y.remove(e,"fxshow"),d)S.style(e,r,d[r])
+      })),
+      u=ct(g?v[r]:0,r,p),r in v||(v[r]=u.start,g&&(u.end=u.start,u.start=0))}
+    }],prefilter:function(e,t){t?ft.prefilters.unshift(e):ft.prefilters.push(e)}})
+```
+
+--------------------------------
+
+### Initialize Layout
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExecutingTestCases/log_passed.html
+
+Sets up the initial page layout, including parsing templates, setting the title, and adding the header.
+
+```javascript
+function initLayout(suiteName, type) { parseTemplates(); setTitle(suiteName, type); addHeader(); addReportOrLogLink(type); }
+```
+
+--------------------------------
+
+### Parse Robot Framework Settings in ReST
+
+Source: https://github.com/robotframework/robotframework/blob/master/atest/testdata/parsing/data_formats/rest/sample.rst
+
+Example of a Robot Framework code block within a ReST file, demonstrating settings like Documentation, Force Tags, Suite Setup, and Resource includes. This block is parsed by Robot Framework.
+
+```robotframework
+*Settings*      *Value*
+
+    Documentation  A complex testdata file in rst format.
+    # Default Tags are in include.rst
+    Force Tags     force1   force2
+
+    Suite Setup    Log   Setup
+    Test Teardown  Log   Test Teardown
+    Resource       ../resources/rest_directive_resource.rst
+    | Variables  | ../resources/variables.py
+    | Library    | OperatingSystem | | | | | | | | | | | | | | | |
+    Invalid    Setting
+```
+
+--------------------------------
+
+### Creating a Robot Framework test suite with setup and teardown
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExecutingTestCases/report_passed.html
+
+Setup and teardown keywords can be defined at the suite, test case, or test level to perform actions before and after execution. This ensures proper resource management.
+
+```robotframework
+*** Settings ***
+Suite Setup    Open Browser To Test Page
+Suite Teardown    Close All Browsers
+
+*** Test Cases ***
+Test With Setup Teardown
+    Log    This test runs between setup and teardown.
+
+*** Keywords ***
+Open Browser To Test Page
+    Log    Opening browser...
+
+Close All Browsers
+    Log    Closing browsers...
+
+```
+
+--------------------------------
+
+### Get Contents with jQuery `contents()`
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExecutingTestCases/report_failed.html
+
+Get the children of each element in the set of matched elements, including text and comment nodes. For iframes, it gets the content document.
+
+```javascript
+contents:function(e){return null!=e.contentDocument&&r(e.contentDocument)?e.contentDocument:(A(e,"template")&&(e=e.content||e),S.merge([],e.childNodes))}}
+```
+
+--------------------------------
+
+### Login Attempt Example
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExecutingTestCases/log_failed.html
+
+Shows how to attempt to log in with provided credentials and check the status. This is useful for verifying login functionality.
+
+```robotframework
+*** Settings ***
+Library    LoginLibrary
+
+*** Test Cases ***
+Attempt To Login With Credentials
+    Login    fred    P4ssw0rd
+    Status Should Be    SUCCESS
+```
+
+--------------------------------
+
+### FOR-IN-RANGE Loop with Start and End
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/CreatingTestData/ControlStructures.rst
+
+Executes a loop within a specified range. Indices start from the given start limit and increase by one until the end limit (exclusive).
+
+```robotframework
+*** Test Cases ***
+Start and end
+    [Documentation]    Loops over values from 1 to 10.
+    FOR    ${index}    IN RANGE    1    11
+        Log    ${index}
+    END
+```
+
+--------------------------------
+
+### AJAX GET Request
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExecutingTestCases/visible_log_level.html
+
+Performs an asynchronous HTTP GET request.
+
+```javascript
+f.get:function(a,b,c,d){f.isFunction(b)&&(d=d||c,c=b,b=b),f.ajax({type:"GET",url:a,data:b,success:c,dataType:d})}
+```
+
+--------------------------------
+
+### Generate HTML documentation
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/SupportingTools/Libdoc.rst
+
+Examples of generating HTML documentation for libraries and resources, including custom naming and format overrides.
+
+```bash
+libdoc OperatingSystem OperatingSystem.html
+libdoc --name MyLibrary Remote::http://10.0.0.42:8270 MyLibrary.html
+libdoc --format HTML test/resource.robot doc/resource.htm
+```
+
+--------------------------------
+
+### Install Python-Markdown
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/Appendices/DocumentationFormatting.rst
+
+Install the Python-Markdown library using pip. This is an optional dependency.
+
+```bash
+pip install markdown
+```
+
+--------------------------------
+
+### Robot Framework Task Syntax Example
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/CreatingTestData/CreatingTasks.rst
+
+Demonstrates the basic syntax for creating tasks in Robot Framework using the Tasks section.
+
+```robotframework
+*** Tasks ***
+Process invoice
+    Read information from PDF
+    Validate information
+    Submit information to backend system
+    Validate information is visible in web UI
+```
+
+--------------------------------
+
+### Using Command Line Options
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExecutingTestCases/BasicUsage.rst
+
+Examples of using command-line options between the runner script and data sources. Options control execution and output generation.
+
+```bash
+robot -L debug my_tests.robot
+robot --include smoke --variable HOST:10.0.0.42 path/to/tests/
+```
+
+--------------------------------
+
+### Command Line Listener Execution
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExtendingRobotFramework/ListenerInterface.rst
+
+Example command to run tests with a specified listener file.
+
+```bash
+   robot --listener path/to/PauseExecution.py tests.robot
+```
+
+--------------------------------
+
+### Install Pygments for Syntax Highlighting
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/Appendices/DocumentationFormatting.rst
+
+Install Pygments using pip if syntax highlighting is required.
+
+```bash
+pip install pygments
+```
+
+--------------------------------
+
+### Get Pixel Left (IE)
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExecutingTestCases/visible_log_level.html
+
+IE-specific function to get the pixel-based left offset of an element.
+
+```javascript
+bB=function(a,b){var c,d=a.currentStyle&&a.currentStyle[b],e=a.runtimeStyle&&a.runtimeStyle[b],f=a.style;!bs.test(d)&&bt.test(d)&&(c=f.left,e&&(a.runtimeStyle.left=a.currentStyle.left),f.left=b==="fontSize"?"1em":d||0,d=f.pixelLeft+"px",f.left=c,e&&(a.runtimeStyle.left=e));return d===""?"auto":d}
+```
+
+--------------------------------
+
+### Importing Libraries with Library Setting
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/CreatingTestData/UsingTestLibraries.rst
+
+Demonstrates various ways to import libraries using the Library setting in the Settings section. Supports direct names, paths, package structures, arguments, and variables.
+
+```robotframework
+*** Settings ***
+Library    OperatingSystem
+Library    path/to/MyLibrary.py
+Library    my.package.TestLibrary
+Library    LibraryAcceptingArguments    arg1    arg2
+Library    ${LIBRARY}
+```
+
+--------------------------------
+
+### Registering Listeners via Command Line
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExtendingRobotFramework/ListenerInterface.rst
+
+Examples of registering one or multiple listeners using the --listener option with names or file paths.
+
+```bash
+robot --listener MyListener tests.robot
+robot --listener path/to/MyListener.py tests.robot
+robot --listener module.Listener --listener AnotherListener tests.robot
+```
+
+--------------------------------
+
+### xunit_file(path)
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExtendingRobotFramework/ListenerInterface.rst
+
+Callback method triggered when the xunit file is ready.
+
+```APIDOC
+## xunit_file(path)
+
+### Description
+Called when the xunit file is ready. The path parameter provides the absolute path to the file as a pathlib.Path object.
+
+### Parameters
+- **path** (pathlib.Path) - Required - Absolute path to the xunit file.
+```
+
+--------------------------------
+
+### Using Robot Framework with Python Libraries
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/SupportingTools/ExampleLibrary.html
+
+Demonstrates how to create a Python library with keywords that can be used in Robot Framework tests.
+
+```python
+class Calculator:
+    def add(self, a, b):
+        """Adds two numbers."""
+        return a + b
+
+    def subtract(self, a, b):
+        """Subtracts second number from the first."""
+        return a - b
+
+```
+
+--------------------------------
+
+### Non-Robot Data Example
+
+Source: https://github.com/robotframework/robotframework/blob/master/atest/testdata/parsing/data_formats/markdown/invalid.markdown
+
+An example of data that is not in Robot Framework format. This snippet is for illustrative purposes.
+
+```rest
+This is not robot data either.
+```
+
+--------------------------------
+
+### Example Resource File Structure
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/CreatingTestData/ResourceAndVariableFiles.rst
+
+A resource file can contain settings like Documentation, Library, Resource, and Variables. It can also define user keywords. It cannot contain tests or tasks.
+
+```robotframework
+*** Settings ***
+Documentation     An example resource file
+Library           SeleniumLibrary
+Resource          ${RESOURCES}/common.resource
+
+*** Variables ***
+${HOST}           localhost:7272
+${LOGIN URL}      http://${HOST}/
+${WELCOME URL}    http://${HOST}/welcome.html
+${BROWSER}        Firefox
+
+*** Keywords ***
+Open Login Page
+    [Documentation]    Opens browser to login page
+    Open Browser    ${LOGIN URL}    ${BROWSER}
+    Title Should Be    Login Page
+
+Input Name
+    [Arguments]    ${name}
+    Input Text    username_field    ${name}
+
+Input Password
+    [Arguments]    ${password}
+    Input Text    password_field    ${password}
+```
+
+--------------------------------
+
+### Initialize Test Documentation UI
+
+Source: https://github.com/robotframework/robotframework/blob/master/src/robot/htmldata/testdoc/testdoc.html
+
+Initializes the document structure, parses templates, and sets up the initial view based on the URL hash or default suite ID.
+
+```javascript
+// Not using jQuery here for maximum speed document.getElementById('javascript-disabled').style.display = 'none';
+
+$(document).ready(function(){ parseTemplates(); addTitle(window.testdoc.title); addGenerated(window.testdoc.generated); addSuite(window.testdoc.suite, 'body'); if (window.location.hash) { makeElementVisible(window.location.hash.substring(1)); } else { makeElementVisible(window.testdoc.suite.id, true); } });
+```
+
+--------------------------------
+
+### Install Python-Markdown dependency
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/releasenotes/rf-7.5b1.rst
+
+Command to install the optional Python-Markdown module required for Markdown support in Libdoc.
+
+```bash
+pip install markdown
+```
+
+--------------------------------
+
+### Get Computed Style (Cross-browser)
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExecutingTestCases/visible_log_level.html
+
+A cross-browser function to get the computed style of an element's property.
+
+```javascript
+bA=function(a,c){var d,e,g;c=c.replace(br,"-$1").toLowerCase();if(!(e=a.ownerDocument.defaultView))return b;if(g=e.getComputedStyle(a,null))d=g.getPropertyValue(c),d===""&&!f.contains(a.ownerDocument.documentElement,a)&&(d=f.style(a,c));return d}
+```
+
+--------------------------------
+
+### Defining Test Cases with Setups and Teardowns
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/CreatingTestData/CreatingTestCases.rst
+
+Demonstrates how to define global test setups and teardowns in the Settings section and how to override or disable them within individual test cases.
+
+```robotframework
+*** Settings ***
+Test Setup       Open Application    App A
+Test Teardown    Close Application
+
+*** Test Cases ***
+Default values
+    [Documentation]    Setup and teardown from setting section
+    Do Something
+
+Overridden setup
+    [Documentation]    Own setup, teardown from setting section
+    [Setup]    Open Application    App B
+    Do Something
+
+No teardown
+    [Documentation]    Default setup, no teardown at all
+    Do Something
+    [Teardown]
+
+No teardown 2
+    [Documentation]    Setup and teardown can be disabled also with special value NONE
+    Do Something
+    [Teardown]    NONE
+
+Using variables
+    [Documentation]    Setup and teardown specified using variables
+    [Setup]    ${SETUP}
+    Do Something
+    [Teardown]    ${TEARDOWN}
+```
+
+--------------------------------
+
+### Testing RETURN statement examples
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/CreatingTestData/CreatingUserKeywords.rst
+
+Test cases to verify the functionality of the RETURN statement examples provided above.
+
+```robotframework
+*** Settings ***
+Library           String
+
+*** Test Cases ***
+One return value
+    ${ret} =    Return One Value    argument
+    Should Be Equal    ${ret}    ARGUMENT
+
+Multiple return values
+    ${a}    ${b}    ${c} =    Return Three Values
+    Should Be Equal    ${a}, ${b}, ${c}    a, b, c
+
+Conditional return
+    Conditional Return    1
+    Conditional Return    2
+
+Advanced
+    @{list} =    Create List    foo    bar    baz
+    ${index} =    Find Index    bar    ${list}
+    Should Be Equal    ${index}    ${1}
+    ${index} =    Find Index    non existing    ${list}
+    Should Be Equal    ${index}    ${-1}
+```
+
+--------------------------------
+
+### Using Argument Files with Robot Framework
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExecutingTestCases/BasicUsage.rst
+
+Provides examples of how to use the '--argumentfile' option to specify argument files when running Robot Framework tests.
+
+```bash
+robot --argumentfile all_options_and_arguments.txt
+```
+
+```bash
+robot --argumentfile defaults.args --name Example tests.robot
+```
+
+```bash
+robot -A first.txt -A second.txt -A third.txt tests.robot
+```
+
+--------------------------------
+
+### Get and Set CSS Properties with jQuery
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExecutingTestCases/report_failed.html
+
+Use the .css() method to get or set CSS properties for elements. When setting, you can pass a single property-value pair or an object of multiple pairs. For getting, it returns the computed style value.
+
+```javascript
+S.extend({cssHooks:{opacity:{get:function(e,t){if(t){var n=Be(e,"opacity");return""===n?"1":n}}}},cssNumber:{animationIterationCount:!0,columnCount:!0,fillOpacity:!0,flexGrow:!0,flexShrink:!0,fontWeight:!0,gridArea:!0,gridColumn:!0,gridColumnEnd:!0,gridColumnStart:!0,gridRow:!0,gridRowEnd:!0,gridRowStart:!0,lineHeight:!0,opacity:!0,order:!0,orphans:!0,widows:!0,zIndex:!0,zoom:!0},cssProps:{},style:function(e,t,n,r){if(e&&3!==e.nodeType&&8!==e.nodeType&&e.style){var i,o,a,s=X(t),u=Ge.test(t),l=e.style;if(u||(t=Xe(s)),a=S.cssHooks[t]||S.cssHooks[s],void 0===n)return a&&"get"in a&&void 0!==(i=a.get(e,!1,r))?i:l[t]{"string"===(o=typeof n)&&(i=te.exec(n))&&i[1]&&(n=se(e,t,i)),null!=n&&n==n&&("number"!==o||u||(n+=i&&i[3]||(S.cssNumber[s]?
+```
+
+```javascript
+S.css=function(e,t,n,r){var i,o,a,s=X(t);return Ge.test(t)||(t=Xe(s)),(a=S.cssHooks[t]||S.cssHooks[s])&&"get"in a&&(i=a.get(e,!0,n)),void 0===i&&(i=Be(e,t,r)),"normal"===i&&t in Qe&&(i=Qe[t]),""===n||n?(o=parseFloat(i),!0===n||isFinite(o)?o||0:i):i}}
+```
+
+```javascript
+S.fn.extend({css:function(e,t){return $(this,function(e,t,n){var r,i,o={},a=0;if(Array.isArray(t)){for(r=Ie(e),i=t.length;a<i;a++)o[t[a]]=S.css(e,t[a],!1,r);return o}return void 0!==n?S.style(e,t,n):S.css(e,t)},e,t,1<arguments.length)}})
+```
+
+--------------------------------
+
+### List Formatting Example
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/Appendices/DocumentationFormatting.rst
+
+Demonstrates creating lists in Robot Framework documentation using hyphens and spaces. Continuing list items across multiple lines is achieved through indentation.
+
+```robotframework
+- a list item
+- second list item is split
+  to multiple lines
+
+This is outside the list.
+```
+
+--------------------------------
+
+### Install Specific Robot Framework Version
+
+Source: https://github.com/robotframework/robotframework/blob/master/doc/releasenotes/rf-7.4.2.rst
+
+Use this command to install Robot Framework version 7.4.2 specifically.
+
+```bash
+pip install robotframework==7.4.2
+```
