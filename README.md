@@ -51,8 +51,9 @@ poetry run robotcode analyze code              # static analysis (no execution)
 
 Results (`log.html`, `report.html`, `output.xml`) are written to `results/`.
 
-Plain `robot` also works if you prefer the standard runner directly:
+Plain `robot` also works, but it does not read `robot.toml` (paths/output-dir),
+so pass them explicitly:
 
 ```bash
-poetry run robot tests/
+poetry run robot --outputdir results tests/
 ```

@@ -3,3 +3,10 @@
 results/
 __pycache__/
 *.pyc
+
+# Robot Framework run artifacts (in case a plain `robot`/`rebot` run drops them
+# outside the configured output-dir, e.g. at the repo root)
+log.html
+report.html
+output.xml
+xunit.xml
